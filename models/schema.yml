@@ -1,11 +1,13 @@
 version: 2
 models:
   - name: customers
+    description: 'this is a test desc'
     columns:
-      - name: customer_id
-        tests:
-          - unique
-          - not_null
+        - name: customer_id
+          description:  "{{doc('table_events')}}"
+          tests:
+            - unique
+            - not_null
   - name: stg_customers
     columns:
       - name: customer_id
